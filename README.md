@@ -43,3 +43,13 @@ defmodule PersonTest do
   end
 end
 ```
+
+### Installation
+
+Add `ex_spec` to your `mix.exs` dependencies:
+
+```elixir
+def deps do
+  [{:ex_spec, "~> 0.1.0"}]
+end
+```
