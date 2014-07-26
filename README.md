@@ -2,7 +2,7 @@
 
 ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `describe`, `context` and `it`.
 
-While it takes inspiration from Rspec, it is significantly simplier. The `describe` and `context` macros have only two functions:
+While it takes inspiration from Rspec, ExSpec is significantly simplier. The `describe` and `context` macros have only two functions:
 
 1. Aid test organization
 2. Prepend to the message of any `it` defined within their do blocks
