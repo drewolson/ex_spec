@@ -4,7 +4,6 @@ defmodule ExSpec do
       import ExSpec
       require ExUnit.Case
 
-      Module.register_attribute(__MODULE__, :ex_spec_contexts, [])
       Module.put_attribute(__MODULE__, :ex_spec_contexts, [])
     end
   end
