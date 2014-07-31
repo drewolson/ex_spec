@@ -28,8 +28,8 @@ defmodule ExSpec do
 
   defmacro it(message, var \\ quote(do: _), body) do
     quote do
-      contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts) |> Enum.reverse |> Enum.map(&(&1.name))
-      full_message = [contexts, unquote(message)] |> List.flatten |> Enum.join(" ")
+      contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts) |> Enum.map(&(&1.name))
+      full_message = [unquote(message)|contexts] |> Enum.reverse |> Enum.join(" ")
 
       ExUnit.Case.test(full_message, unquote(var), unquote(body))
     end
