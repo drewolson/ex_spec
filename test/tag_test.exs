@@ -1,6 +1,5 @@
 defmodule TagTest do
-  use ExUnit.Case, async: true
-  use ExSpec
+  use ExSpec, async: true
 
   describe "tags" do
     context "are handled correctly" do

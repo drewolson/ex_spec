@@ -1,6 +1,5 @@
 defmodule SetupTest do
-  use ExUnit.Case, async: true
-  use ExSpec
+  use ExSpec, async: true
 
   setup do
     {:ok, [foo: "bar"]}

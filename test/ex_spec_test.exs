@@ -1,6 +1,5 @@
 defmodule ExSpecTest do
-  use ExUnit.Case, async: true
-  use ExSpec
+  use ExSpec, async: true
 
   test "standard tests work" do
     assert 1 + 1 == 2

@@ -13,7 +13,7 @@ Furthermore, `describe` and `context` are aliases and function identically.
 
 The `it` macro is identical to `ExUnit.Case.test` except that it is aware of the messages of its surrounding `describe` and `context` blocks.
 
-Other than the functionality described above, ExSpec is just ExUnit.
+Other than the functionality described above, ExSpec is just ExUnit. When `use`ing `ExSpec`, any options provided will be passed to `ExUnit.Case` (e.g. `async: true`).
 
 A simple example is shown below. For more examples, see the tests.
 
@@ -21,8 +21,7 @@ A simple example is shown below. For more examples, see the tests.
 
 ```elixir
 defmodule PersonTest do
-  use ExUnit.Case
-  use ExSpec
+  use ExSpec, async: true
 
   describe "#name" do
     context "with first and last name" do

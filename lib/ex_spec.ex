@@ -1,8 +1,8 @@
 defmodule ExSpec do
-  defmacro __using__(_) do
+  defmacro __using__(options) do
     quote do
       import ExSpec
-      require ExUnit.Case
+      use ExUnit.Case, unquote(options)
 
       Module.put_attribute(__MODULE__, :ex_spec_contexts, [])
     end
