@@ -49,6 +49,6 @@ Add `ex_spec` to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
-  [{:ex_spec, "~> 0.3.0"}]
+  [{:ex_spec, "~> 0.3.0", only: :test}]
 end
 ```
