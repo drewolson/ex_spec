@@ -29,7 +29,10 @@ defmodule ExSpec.Mixfile do
     [
       contributors: ["Drew Olson"],
       licenses: ["MIT"],
-      links: %{"github" => "https://github.com/drewolson/ex_spec"}
+      links: %{
+        "github" => "https://github.com/drewolson/ex_spec",
+        "docs" => "https://hexdocs.pm/ex_spec"
+      }
     ]
   end
 end
