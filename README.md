@@ -1,6 +1,6 @@
 ## ExSpec
 
-[![Build Status](https://travis-ci.org/drewolson/ex_spec.svg)](https://travis-ci.org/drewolson/ex_spec)
+[![Build Status](https://travis-ci.org/drewolson/ex_spec.svg)](https://travis-ci.org/drewolson/ex_spec) [![Hex Version](http://img.shields.io/hexpm/v/ex_spec.svg)](https://hex.pm/packages/ex_spec)
 
 ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `describe`, `context` and `it`.
 
