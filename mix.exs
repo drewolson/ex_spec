@@ -10,7 +10,11 @@ defmodule ExSpec.Mixfile do
       description: "BDD-like syntax for ExUnit",
       source_url: "https://github.com/drewolson/ex_spec",
       homepage_url: "https://hex.pm/packages/ex_spec",
-      deps: deps
+      deps: deps,
+      docs: [
+        main: ExSpec,
+        readme: "README.md"
+      ]
     ]
   end
 
