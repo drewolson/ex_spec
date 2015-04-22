@@ -3,7 +3,7 @@ defmodule TagTest do
 
   describe "tags" do
     context "are handled correctly" do
-      @tag :foo
+      @tag :dont_run_me
       it "excludes this test" do
         assert 1 == 2
       end
