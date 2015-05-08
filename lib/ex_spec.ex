@@ -20,7 +20,7 @@ defmodule ExSpec do
       defmodule PersonTest do
         use ExSpec, async: true
 
-        describe "#name" do
+        describe "name" do
           context "with first and last name" do
             it "joins the names with a space" do
               drew = %Person{first_name: "Drew", last_name: "Olson"}
