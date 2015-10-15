@@ -28,4 +28,7 @@ defmodule ExSpecTest do
       end
     end
   end
+
+  @tag :skip
+  it "supports pending tests"
 end

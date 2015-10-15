@@ -1,3 +1,3 @@
 defmodule ExSpec.Context do
-  defstruct name: ""
+  defstruct [:name]
 end

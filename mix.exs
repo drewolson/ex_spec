@@ -5,7 +5,7 @@ defmodule ExSpec.Mixfile do
     [
       app: :ex_spec,
       version: "0.3.0",
-      elixir: "~> 1.0",
+      elixir: "~> 1.1",
       package: package,
       description: "BDD-like syntax for ExUnit",
       source_url: "https://github.com/drewolson/ex_spec",
