@@ -69,8 +69,7 @@ defmodule ExSpec do
 
   defmacro it(message) do
     quote do
-      contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts) |> Enum.map(&(&1.name))
-      full_message = [unquote(message)|contexts] |> Enum.reverse |> Enum.join(" ")
+      full_message = ExSpec.Helpers.full_message(__MODULE__, unquote(message))
 
       ExUnit.Case.test(full_message)
     end
@@ -78,8 +77,7 @@ defmodule ExSpec do
 
   defmacro it(message, var \\ quote(do: _), body) do
     quote do
-      contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts) |> Enum.map(&(&1.name))
-      full_message = [unquote(message)|contexts] |> Enum.reverse |> Enum.join(" ")
+      full_message = ExSpec.Helpers.full_message(__MODULE__, unquote(message))
 
       ExUnit.Case.test(full_message, unquote(var), unquote(body))
     end
