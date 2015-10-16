@@ -4,7 +4,7 @@ defmodule ExSpec.Mixfile do
   def project do
     [
       app: :ex_spec,
-      version: "0.3.0",
+      version: "1.0.0",
       elixir: "~> 1.1",
       package: package,
       description: "BDD-like syntax for ExUnit",
