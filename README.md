@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/drewolson/ex_spec.svg)](https://travis-ci.org/drewolson/ex_spec) [![Hex Version](http://img.shields.io/hexpm/v/ex_spec.svg?style=flat)](https://hex.pm/packages/ex_spec) [![Hex docs](http://img.shields.io/badge/hex.pm-docs-green.svg?style=flat)](https://hexdocs.pm/ex_spec)
 
+**Note**: If you're using Elixir `>= 1.3.0`, use `ExUnit`'s provided `describe`.
+
 ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `describe`, `context` and `it`.
 
 While it takes inspiration from Rspec, ExSpec is significantly simplier. The `describe` and `context` macros have only two functions:
