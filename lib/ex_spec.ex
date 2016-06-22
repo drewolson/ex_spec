@@ -49,7 +49,7 @@ defmodule ExSpec do
     end
   end
 
-  defmacro describe(message, body) do
+  defmacro context(message, body) do
     quote do
       previous_contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts)
       context = %ExSpec.Context{name: unquote(message)}
@@ -61,9 +61,9 @@ defmodule ExSpec do
     end
   end
 
-  defmacro context(message, body) do
+  defmacro describe(message, body) do
     quote do
-      describe(unquote(message), unquote(body))
+      context(unquote(message), unquote(body))
     end
   end
 
