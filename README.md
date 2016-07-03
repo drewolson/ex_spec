@@ -2,18 +2,14 @@
 
 [![Build Status](https://travis-ci.org/drewolson/ex_spec.svg)](https://travis-ci.org/drewolson/ex_spec) [![Hex Version](http://img.shields.io/hexpm/v/ex_spec.svg?style=flat)](https://hex.pm/packages/ex_spec) [![Hex docs](http://img.shields.io/badge/hex.pm-docs-green.svg?style=flat)](https://hexdocs.pm/ex_spec)
 
-**Note**: If you're using Elixir `>= 1.3.0`, use `ExUnit`'s provided `describe`.
+ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `context` and `it`.
 
-ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `describe`, `context` and `it`.
-
-While it takes inspiration from Rspec, ExSpec is significantly simplier. The `describe` and `context` macros have only two functions:
+While it takes inspiration from Rspec, ExSpec is significantly simplier. The `context` macro has only two functions:
 
 1. Aid test organization
-2. Prepend to the message of any `it` defined within their do blocks
+2. Prepend to the message of any `it` defined within its do blocks
 
-Furthermore, `describe` and `context` are aliases and function identically.
-
-The `it` macro is identical to `ExUnit.Case.test` except that it is aware of the messages of its surrounding `describe` and `context` blocks.
+The `it` macro is identical to `ExUnit.Case.test` except that it is aware of the messages of its surrounding `context` blocks. It also works seemlessly with `ExUnit`'s `describe` function.
 
 Other than the functionality described above, ExSpec is just ExUnit. When `use`ing `ExSpec`, any options provided will be passed to `ExUnit.Case` (e.g. `async: true`).
 
@@ -51,6 +47,6 @@ Add `ex_spec` to your `mix.exs` dependencies:
 
 ```elixir
 def deps do
-  [{:ex_spec, "~> 1.0", only: :test}]
+  [{:ex_spec, "~> 2.0", only: :test}]
 end
 ```

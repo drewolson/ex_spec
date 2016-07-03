@@ -1,21 +1,19 @@
 defmodule ExSpec do
   @moduledoc """
-  ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `describe`, `context` and `it`.
+  ExSpec is a simple wrapper around ExUnit that adds Rspec-style macros. Specifically, it adds `context` and `it`.
 
-  While it takes inspiration from Rspec, ExSpec is significantly simplier. The `describe` and `context` macros have only two functions:
+  While it takes inspiration from Rspec, ExSpec is significantly simplier. The `context` macro has only two functions:
 
   1. Aid test organization
-  2. Prepend to the message of any `it` defined within their do blocks
+  2. Prepend to the message of any `it` defined within its do blocks
 
-  Furthermore, `describe` and `context` are aliases and function identically.
-
-  The `it` macro is identical to `ExUnit.Case.test` except that it is aware of the messages of its surrounding `describe` and `context` blocks.
+  The `it` macro is identical to `ExUnit.Case.test` except that it is aware of the messages of its surrounding `context` blocks. It also works seemlessly with `ExUnit`'s `describe` function.
 
   Other than the functionality described above, ExSpec is just ExUnit. When `use`ing `ExSpec`, any options provided will be passed to `ExUnit.Case` (e.g. `async: true`).
 
   A simple example is shown below. For more examples, see the tests.
 
-  ## Example
+  ### Example
 
       defmodule PersonTest do
         use ExSpec, async: true
@@ -49,7 +47,7 @@ defmodule ExSpec do
     end
   end
 
-  defmacro describe(message, body) do
+  defmacro context(message, body) do
     quote do
       previous_contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts)
       context = %ExSpec.Context{name: unquote(message)}
@@ -58,12 +56,6 @@ defmodule ExSpec do
       unquote(body)
 
       Module.put_attribute(__MODULE__, :ex_spec_contexts, previous_contexts)
-    end
-  end
-
-  defmacro context(message, body) do
-    quote do
-      describe(unquote(message), unquote(body))
     end
   end
 

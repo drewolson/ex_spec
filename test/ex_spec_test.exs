@@ -10,21 +10,13 @@ defmodule ExSpecTest do
   end
 
   describe "describes" do
-    describe "can be nested" do
-      it "arbitrarily" do
-        name = __ENV__.function |> elem(0)
+    context "and contexts" do
+      context "can be nested" do
+        it "arbitrarily" do
+          name = __ENV__.function |> elem(0)
 
-        assert name == :"test describes can be nested arbitrarily"
-      end
-    end
-  end
-
-  describe "contexts" do
-    context "can be nested" do
-      it "as well" do
-        name = __ENV__.function |> elem(0)
-
-        assert name == :"test contexts can be nested as well"
+          assert name == :"test describes and contexts can be nested arbitrarily"
+        end
       end
     end
   end
