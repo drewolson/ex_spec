@@ -12,8 +12,10 @@ defmodule ExSpec.Mixfile do
       homepage_url: "https://hex.pm/packages/ex_spec",
       deps: deps,
       docs: [
-        main: ExSpec,
-        readme: "README.md"
+        main: "readme",
+        extras: [
+          "README.md"
+        ]
       ]
     ]
   end
