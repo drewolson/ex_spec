@@ -26,8 +26,8 @@ defmodule ExSpec.Mixfile do
 
   defp deps do
     [
-      {:earmark, ">= 0.0.0", only: :dev},
-      {:ex_doc, "~> 0.12.0", only: :dev}
+      {:earmark, "~> 1.0", only: :dev},
+      {:ex_doc, "~> 0.14.0", only: :dev}
     ]
   end
 
