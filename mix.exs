@@ -5,12 +5,12 @@ defmodule ExSpec.Mixfile do
     [
       app: :ex_spec,
       version: "2.0.0",
-      elixir: "~> 1.3.0",
-      package: package,
+      elixir: "~> 1.3",
+      package: package(),
       description: "BDD-like syntax for ExUnit",
       source_url: "https://github.com/drewolson/ex_spec",
       homepage_url: "https://hex.pm/packages/ex_spec",
-      deps: deps,
+      deps: deps(),
       docs: [
         main: "readme",
         extras: [
