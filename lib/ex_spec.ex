@@ -40,8 +40,9 @@ defmodule ExSpec do
 
   defmacro __using__(options) do
     quote do
-      import ExSpec
       use ExUnit.Case, unquote(options)
+
+      import ExSpec
 
       Module.put_attribute(__MODULE__, :ex_spec_contexts, [])
     end
