@@ -52,7 +52,7 @@ defmodule ExSpec do
     quote do
       previous_contexts = Module.get_attribute(__MODULE__, :ex_spec_contexts)
       context = %ExSpec.Context{name: unquote(message)}
-      Module.put_attribute(__MODULE__, :ex_spec_contexts, [context|previous_contexts])
+      Module.put_attribute(__MODULE__, :ex_spec_contexts, [context | previous_contexts])
 
       unquote(body)
 
